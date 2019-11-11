@@ -20,25 +20,24 @@ function calculateResult() {
     } else if (dealerHand < playerHand) {
         playerWin();
     } else if (dealerHand === playerHand){
-        console.log("Draw. " + dealerHand + " - " + playerHand + ".");
+        alert("It's a draw!\n\nDealer: " + dealerHand + "\nPlayer: " + playerHand);
+        reset();
     }
-    reset();
 }
 
 function reset() {
     dealerHand = 0;
     playerHand = 0;
+    console.log("Press 'D' to start again!");
 }
 
 function dealerWin() {
     alert("Dealer wins!\n\nDealer: " + dealerHand + "\nPlayer: " + playerHand);
-    console.log("Press 'D' to start again!")
     reset();
 }
 
 function playerWin() {
     alert("Player wins!\n\nPlayer: " + playerHand + "\nDealer: " + dealerHand);
-    console.log("Press 'D' to start again!")
     reset();
 }
 
