@@ -10,7 +10,7 @@ let playerHand = 0;
 let dealerHand = 0;
 
 /** 
- * @desc Generates a random number.
+ * @desc Generate a random number.
  * @return number - Returns a number from 1 to 11. 
  */
 function getRandomNumber (){
@@ -49,7 +49,7 @@ function calculateResult() {
 }
 
 /** 
- * @desc Alerts that dealer has won. Call the reset function.
+ * @desc Alert that dealer has won. Call the reset function.
  */
 function dealerWin() {
     alert("Dealer wins!\n\nDealer: " + dealerHand + "\nPlayer: " + playerHand);
@@ -57,7 +57,7 @@ function dealerWin() {
 }
 
 /** 
- * @desc Alerts that player has won. Call the reset function.
+ * @desc Alert that player has won. Call the reset function.
  */
 function playerWin() {
     alert("Player wins!\n\nPlayer: " + playerHand + "\nDealer: " + dealerHand);
@@ -65,7 +65,7 @@ function playerWin() {
 }
 
 /** 
- * @desc Alerts that it is a draw. Call the reset function.
+ * @desc Alert that it is a draw. Call the reset function.
  */
 function draw() {
     alert("It's a draw!\n\nDealer: " + dealerHand + "\nPlayer: " + playerHand);
@@ -73,7 +73,7 @@ function draw() {
 }
 
 /** 
- * @desc Sets the results to 0.
+ * @desc Set the results to 0.
  */
 function reset() {
     dealerHand = 0;
@@ -82,9 +82,10 @@ function reset() {
 }
 
 /** 
- * @desc If D-key is pressed; deal cards. Checks if it's the first round when dealer should get 2 cards.
- * Evaluate result.
- * If S-key is pressed; give dealer another card if hand < 17. Evaluate result.
+ * @desc If D-key is pressed; deal cards. Check if it's the first round when dealer should get 2 cards.
+ * Check if dealt card/cards result in 21, which is a win, or > 21 which is a loss.
+ * If S-key is pressed; give dealer another card if hand < 17.
+ * Check if dealt card result in 21, which is a dealer win, or > 21 which is a player win.
  */
 window.addEventListener("keydown", function(event){
     if (event.code === 'KeyD') {
