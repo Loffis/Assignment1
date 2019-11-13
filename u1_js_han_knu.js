@@ -36,7 +36,7 @@ function dealerDrawCard (){
 }
 
 /** 
- * @desc Evaluate result if neither player nor dealer is busted.
+ * @desc Evaluate result if neither player nor dealer is busted or already has got 21.
  */
 function calculateResult() {
     if (dealerHand > playerHand) {
